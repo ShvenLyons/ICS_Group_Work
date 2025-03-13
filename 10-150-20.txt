@@ -1,0 +1,55 @@
+# Nmap 7.94SVN scan initiated Thu Mar 13 07:34:11 2025 as: nmap -A -O -oN /home/kali/Desktop/10-150-20.txt 10.150.20.0/24
+Nmap scan report for 10.150.20.1
+Host is up (0.0063s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  Unbound
+80/tcp open  http    nginx
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 10.150.20.100
+Host is up (0.013s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE   VERSION
+443/tcp  open  ssl/https Apache/2.4.52 (Ubuntu)
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=ubuntu.localdomain
+| Subject Alternative Name: DNS:ubuntu.localdomain
+| Not valid before: 2023-09-04T14:54:34
+|_Not valid after:  2033-09-01T14:54:34
+8080/tcp open  http      Apache httpd 2.4.52 ((Ubuntu))
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 10.150.20.150
+Host is up (0.011s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.7p1 Ubuntu 7ubuntu4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 35:94:fb:70:36:1a:26:3c:a8:3c:5a:5a:e4:fb:8c:18 (ECDSA)
+|_  256 c2:52:7c:42:61:ce:97:9d:12:d5:01:1c:ba:68:0f:fa (ED25519)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar 13 07:36:34 2025 -- 256 IP addresses (3 hosts up) scanned in 142.31 seconds

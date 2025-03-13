@@ -1,0 +1,366 @@
+# Nmap 7.94SVN scan initiated Thu Mar 13 07:01:51 2025 as: nmap -A -O -oN /home/kali/Desktop/1-1.txt 172.20.1.1/24
+Nmap scan report for 172.20.1.1
+Host is up (0.0048s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  Unbound
+80/tcp open  http    nginx
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.2
+Host is up (0.0071s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+808/tcp   open  ccproxy-http?
+1801/tcp  open  msmq?
+2103/tcp  open  zephyr-clt?
+2105/tcp  open  eklogin?
+2107/tcp  open  msmq-mgmt?
+2179/tcp  open  vmrdp?
+4002/tcp  open  mlchat-proxy?
+27000/tcp open  flexlm        FlexLM license manager
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -3s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-03-13T11:04:13
+|_  start_date: N/A
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.9
+Host is up (0.011s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE        VERSION
+5001/tcp open  commplex-link?
+5002/tcp open  rfe?
+5800/tcp open  vnc-http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html
+|     <!-- index.vnc - default html page for Java VNC viewer applet. On any file
+|     ending in .vnc, the HTTP server embedded in Xvnc will substitute the
+|     following variables when preceded by a dollar: USER, DESKTOP, DISPLAY,
+|     APPLETWIDTH, APPLETHEIGHT, WIDTH, HEIGHT, PORT, PARAMS. Use two dollar
+|     signs ($) to get a dollar sign in the generated html. -->
+|     <HTML>
+|     <head> 
+|     <TITLE>
+|     Siemens Sm@rtClient Desktop [SmartServer]
+|     </TITLE>
+|     </head> 
+|     <APPLET CODE=VncViewer.class ARCHIVE=VncViewer.jar
+|     WIDTH=800 HEIGHT=512>
+|     <param name=PORT value=5900>
+|     <param name="Open New Window" value=no>
+|     </APPLET>
+|     <br/>
+|     <br/>
+|     <!--If the above Java applet does not work, you can also try the new JavaScript-only <a href="http://kanaka.github.com/noVNC/">noVNC</a> viewer. You will need a HTML5-capable browser though. -->
+|_    <script language="J
+5900/tcp open  vnc            VNC (protocol 3.8)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5800-TCP:V=7.94SVN%I=7%D=3/13%Time=67D2BB2E%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,68E,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nCont
+SF:ent-Type:\x20text/html\r\n\r\n<!--\x20index\.vnc\x20-\x20default\x20htm
+SF:l\x20page\x20for\x20Java\x20VNC\x20viewer\x20applet\.\x20\x20On\x20any\
+SF:x20file\n\x20\x20\x20\x20\x20ending\x20in\x20\.vnc,\x20the\x20HTTP\x20s
+SF:erver\x20embedded\x20in\x20Xvnc\x20will\x20substitute\x20the\n\x20\x20\
+SF:x20\x20\x20following\x20variables\x20when\x20preceded\x20by\x20a\x20dol
+SF:lar:\x20USER,\x20DESKTOP,\x20DISPLAY,\n\x20\x20\x20\x20\x20APPLETWIDTH,
+SF:\x20APPLETHEIGHT,\x20WIDTH,\x20HEIGHT,\x20PORT,\x20PARAMS\.\x20\x20Use\
+SF:x20two\x20dollar\n\x20\x20\x20\x20\x20signs\x20\(\$\)\x20to\x20get\x20a
+SF:\x20dollar\x20sign\x20in\x20the\x20generated\x20html\.\x20-->\n\n<HTML>
+SF:\n<head>\x20\n<TITLE>\nSiemens\x20Sm@rtClient\x20Desktop\x20\[SmartServ
+SF:er\]\n</TITLE>\n</head>\x20\n\n<APPLET\x20CODE=VncViewer\.class\x20ARCH
+SF:IVE=VncViewer\.jar\n\x20\x20\x20\x20\x20\x20\x20\x20WIDTH=800\x20HEIGHT
+SF:=512>\n<param\x20name=PORT\x20value=5900>\n<param\x20name=\"Open\x20New
+SF:\x20Window\"\x20value=no>\n</APPLET>\n<br/>\n<br/>\n<!--If\x20the\x20ab
+SF:ove\x20Java\x20applet\x20does\x20not\x20work,\x20you\x20can\x20also\x20
+SF:try\x20the\x20new\x20JavaScript-only\x20<a\x20href=\"http://kanaka\.git
+SF:hub\.com/noVNC/\">noVNC</a>\x20viewer\.\x20You\x20will\x20need\x20a\x20
+SF:HTML5-capable\x20browser\x20though\.\x20-->\n<script\x20language=\"J");
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.10
+Host is up (0.011s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| http-title: Introduction
+|_Requested resource was /Portal/Intro.mwsl
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 NOT FOUND
+|     Content-Type:text/html
+|     Content-Length:22
+|     Connection: close
+|     <h3>404 NOT FOUND</h3>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Object Moved
+|     Content-Type: text/html; charset=UTF-8
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Location: /Default.mwsl
+|     Content-Length: 0
+|_    Connection: close
+443/tcp open  ssl/https
+| ssl-cert: Subject: commonName=172.20.1.10/organizationName=Siemens AG/countryName=DE
+| Not valid before: 2011-12-31T23:59:59
+|_Not valid after:  2042-01-01T00:00:00
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Object Moved
+|     Content-Type: text/html; charset=UTF-8
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Location: /Default.mwsl
+|     Content-Length: 0
+|_    Connection: close
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.94SVN%I=7%D=3/13%Time=67D2BB2E%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,BB,"HTTP/1\.0\x20302\x20Object\x20Moved\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=UTF-8\r\nCache-Control:\x20no-cache\r\nPragma:\x20
+SF:no-cache\r\nExpires:\x200\r\nLocation:\x20/Default\.mwsl\r\nContent-Len
+SF:gth:\x200\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,BB,"HTTP/1\.0
+SF:\x20302\x20Object\x20Moved\r\nContent-Type:\x20text/html;\x20charset=UT
+SF:F-8\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x2
+SF:00\r\nLocation:\x20/Default\.mwsl\r\nContent-Length:\x200\r\nConnection
+SF::\x20close\r\n\r\n")%r(FourOhFourRequest,6E,"HTTP/1\.0\x20404\x20NOT\x2
+SF:0FOUND\r\nContent-Type:text/html\r\nContent-Length:22\r\nConnection:\x2
+SF:0close\r\n\r\n<h3>404\x20NOT\x20FOUND</h3>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=3/13%Time=67D2BB36%P=x86_64-pc-linux-
+SF:gnu%r(GetRequest,BB,"HTTP/1\.0\x20302\x20Object\x20Moved\r\nContent-Typ
+SF:e:\x20text/html;\x20charset=UTF-8\r\nCache-Control:\x20no-cache\r\nPrag
+SF:ma:\x20no-cache\r\nExpires:\x200\r\nLocation:\x20/Default\.mwsl\r\nCont
+SF:ent-Length:\x200\r\nConnection:\x20close\r\n\r\n");
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.19
+Host is up (0.0042s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+5900/tcp open  vnc     VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     VNC Authentication (2)
+|     Tight (16)
+|   Tight auth subtypes: 
+|_    STDV VNCAUTH_ (2)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.30
+Host is up (0.0074s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+9081/tcp open  cisco-aqos?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 13 Mar 2025 11:02:08 GMT
+|     Connection: close
+|     Content-Type: multipart/x-mixed-replace; boundary=BoundaryString
+|     --BoundaryString
+|     Content-type: image/jpeg
+|     Content-Length: 206602
+|     JFIF
+|     Exif
+|     0220
+|     2025:03:13 11:02:09
+|     2025:03:13 11:02:09
+|     $3br
+|     %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+|_    &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9081-TCP:V=7.94SVN%I=7%D=3/13%Time=67D2BB34%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,1763,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2013\x20Mar\
+SF:x202025\x2011:02:08\x20GMT\r\nConnection:\x20close\r\nContent-Type:\x20
+SF:multipart/x-mixed-replace;\x20boundary=BoundaryString\r\n\r\n--Boundary
+SF:String\r\nContent-type:\x20image/jpeg\r\nContent-Length:\x20\x20\x20\x2
+SF:0206602\r\n\r\n\xff\xd8\xff\xe0\0\x10JFIF\0\x01\x01\0\0\x01\0\x01\0\0\x
+SF:ff\xe1\0\x80Exif\0\0MM\0\*\0\0\0\x08\0\x03\x012\0\x02\0\0\0\x14\0\0\0P\
+SF:x87i\0\x04\0\0\0\x01\0\0\x002\x88\*\0\x08\0\0\0\x01\0\0\0\0\0\0\0\0\0\x
+SF:02\x90\0\0\x07\0\0\0\x040220\x90\x03\0\x02\0\0\0\x14\0\0\0d\0\0\0\x0020
+SF:25:03:13\x2011:02:09\x002025:03:13\x2011:02:09\0\xff\xdb\0C\0\x05\x03\x
+SF:04\x04\x04\x03\x05\x04\x04\x04\x05\x05\x05\x06\x07\x0c\x08\x07\x07\x07\
+SF:x07\x0f\x0b\x0b\t\x0c\x11\x0f\x12\x12\x11\x0f\x11\x11\x13\x16\x1c\x17\x
+SF:13\x14\x1a\x15\x11\x11\x18!\x18\x1a\x1d\x1d\x1f\x1f\x1f\x13\x17\"\$\"\x
+SF:1e\$\x1c\x1e\x1f\x1e\xff\xdb\0C\x01\x05\x05\x05\x07\x06\x07\x0e\x08\x08
+SF:\x0e\x1e\x14\x11\x14\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1
+SF:e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x
+SF:1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\x1e\
+SF:x1e\x1e\xff\xc0\0\x11\x08\x02\xd0\x05\0\x03\x01\"\0\x02\x11\x01\x03\x11
+SF:\x01\xff\xc4\0\x1f\0\0\x01\x05\x01\x01\x01\x01\x01\x01\0\0\0\0\0\0\0\0\
+SF:x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\0\xb5\x10\0\x02\x01\x03
+SF:\x03\x02\x04\x03\x05\x05\x04\x04\0\0\x01}\x01\x02\x03\0\x04\x11\x05\x12
+SF:!1A\x06\x13Qa\x07\"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0\$3br\x
+SF:82\t\n\x16\x17\x18\x19\x1a%&'\(\)\*456789:CDEFGHIJSTUVWXYZcdefghijstuvw
+SF:xyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a
+SF:\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xb
+SF:a\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\x
+SF:da\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xf1\xf2\xf3\xf4\xf5\xf6\xf7\
+SF:xf8\xf9\xfa\xff\xc4\0\x1f\x01\0\x03\x01\x01\x01\x01\x01\x01\x01\x01\x01
+SF:\0\0\0\0\0\0\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\0\xb5\x11\
+SF:0\x02\x01\x02\x04\x04\x03\x04\x07\x05\x04\x04\0\x01\x02w\0\x01\x02\x03\
+SF:x11\x04\x05!1\x06\x12AQ\x07aq\x13\"2\x81\x08\x14B\x91\xa1\xb1\xc1\t#3R\
+SF:xf0\x15br\xd1\n\x16\$4\xe1%\xf1\x17\x18\x19\x1a&'\(\)\*56789:CDEFGHIJST
+SF:UVWXYZcdefghijstuvwxyz\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\
+SF:x95\x96\x97\x98\x99\x9a\xa2");
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.70
+Host is up (0.0064s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows 7 Enterprise N 7601 Service Pack 1 microsoft-ds (workgroup: ICS-LAB-OT)
+1025/tcp open  msrpc         Microsoft Windows RPC
+1026/tcp open  LSA-or-nterm?
+1027/tcp open  msrpc         Microsoft Windows RPC
+1038/tcp open  mtqp?
+1048/tcp open  neod2?
+1947/tcp open  http          Aladdin/SafeNet HASP license manager 20.03
+|_http-server-header: HASP LM/20.03
+3389/tcp open  tcpwrapped
+| ssl-cert: Subject: commonName=KEPWARE-SERVER.ICS-Lab-OT.net
+| Not valid before: 2019-03-31T22:41:30
+|_Not valid after:  2019-09-30T22:41:30
+|_ssl-date: 2019-04-06T17:21:51+00:00; -5y340d17h43m07s from scanner time.
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Service Info: Host: KEPWARE-SERVER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: KEPWARE-SERVER, NetBIOS user: <unknown>, NetBIOS MAC: c4:95:a2:c2:ce:d8 (Shenzhen Weijiu Industry AND Trade Development)
+| smb2-time: 
+|   date: 2019-04-06T17:21:10
+|_  start_date: 2019-04-06T17:17:47
+|_clock-skew: mean: -2167d17h58m03s, deviation: 29m52s, median: -2167d17h43m07s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows 7 Enterprise N 7601 Service Pack 1 (Windows 7 Enterprise N 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1
+|   Computer name: KEPWARE-SERVER
+|   NetBIOS computer name: KEPWARE-SERVER\x00
+|   Domain name: ICS-Lab-OT.net
+|   Forest name: ICS-Lab-OT.net
+|   FQDN: KEPWARE-SERVER.ICS-Lab-OT.net
+|_  System time: 2019-04-06T18:21:13+01:00
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.100
+Host is up (0.0055s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE        VERSION
+135/tcp   open  msrpc          Microsoft Windows RPC
+139/tcp   open  netbios-ssn    Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server?
+| ssl-cert: Subject: commonName=ENG-WORKSTATION.ICS-Lab-OT.net
+| Not valid before: 2019-04-05T15:49:34
+|_Not valid after:  2019-10-05T15:49:34
+|_ssl-date: 2019-04-06T17:21:52+00:00; -5y340d17h43m06s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: ICS-LAB-OT
+|   NetBIOS_Domain_Name: ICS-LAB-OT
+|   NetBIOS_Computer_Name: ENG-WORKSTATION
+|   DNS_Domain_Name: ICS-Lab-OT.net
+|   DNS_Computer_Name: ENG-WORKSTATION.ICS-Lab-OT.net
+|   DNS_Tree_Name: ICS-Lab-OT.net
+|   Product_Version: 10.0.19041
+|_  System_Time: 2019-04-06T17:21:10+00:00
+4002/tcp  open  mlchat-proxy?
+27000/tcp open  flexlm0?
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -2167d17h43m06s, deviation: 0s, median: -2167d17h43m06s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: ENG-WORKSTATION, NetBIOS user: <unknown>, NetBIOS MAC: a8:a0:89:08:1a:43 (Tactical Communications)
+| smb2-time: 
+|   date: 2019-04-06T17:21:11
+|_  start_date: N/A
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Nmap scan report for 172.20.1.150
+Host is up (0.0053s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.7p1 Ubuntu 7ubuntu4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 35:94:fb:70:36:1a:26:3c:a8:3c:5a:5a:e4:fb:8c:18 (ECDSA)
+|_  256 c2:52:7c:42:61:ce:97:9d:12:d5:01:1c:ba:68:0f:fa (ED25519)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar 13 07:04:59 2025 -- 256 IP addresses (9 hosts up) scanned in 187.90 seconds
