@@ -1,0 +1,60 @@
+# Nmap 7.94SVN scan initiated Thu Mar 13 06:56:46 2025 as: nmap -oN /home/kali/Desktop/log2.txt 172.20.50.0/24
+Nmap scan report for 172.20.50.1
+Host is up (0.0040s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 172.20.50.2
+Host is up (0.0042s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 172.20.50.100
+Host is up (0.0081s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+53/tcp   open  domain
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for 172.20.50.110
+Host is up (0.013s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 172.20.50.150
+Host is up (0.015s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 172.20.50.160
+Host is up (0.010s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+1026/tcp open  LSA-or-nterm
+1027/tcp open  IIS
+1040/tcp open  netsaint
+1041/tcp open  danf-ak2
+1947/tcp open  sentinelsrm
+3389/tcp open  ms-wbt-server
+
+# Nmap done at Thu Mar 13 06:57:03 2025 -- 256 IP addresses (6 hosts up) scanned in 17.57 seconds

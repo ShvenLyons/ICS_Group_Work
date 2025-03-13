@@ -1,0 +1,22 @@
+# Nmap 7.94SVN scan initiated Thu Mar 13 06:57:30 2025 as: nmap -oN /home/kali/Desktop/log3.txt 10.150.20.0/24
+Nmap scan report for 10.150.20.1
+Host is up (0.0079s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 10.150.20.100
+Host is up (0.0075s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE
+443/tcp  open  https
+8080/tcp open  http-proxy
+
+Nmap scan report for 10.150.20.150
+Host is up (0.0082s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+# Nmap done at Thu Mar 13 06:57:38 2025 -- 256 IP addresses (3 hosts up) scanned in 8.16 seconds
