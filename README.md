@@ -21,7 +21,7 @@
 | 172.20.1.2    | 135,139,445,808,1801,2103,2105,2107,2179,4002,27000                   | Windows RPC, SMB, FlexLM许可服务          | Windows                               | 应用服务器或许可服务器                   |
 | 172.20.1.9    | 5001,5002,5800,5900                                                  | Siemens Sm@rtClient VNC                   | Siemens工控系统                      | 工业控制系统人机界面（Siemens）          |
 | 172.20.1.10   | 80,443                                                               | Siemens定制HTTP(S)服务                    | Siemens工业设备                       | 工业设备Web接口                         |
-| 172.20.1.19   | 5900                                                                 | VNC（3.8）                               | 未明确                               | 远程桌面控制系统                         |
+| 172.20.1.19   | 5900                                                                 | VNC（3.8）                               | Allen-Bradley                         | 远程桌面控制系统                         |
 | 172.20.1.30   | 9081                                                                 | Cisco AQOS监控界面                       | Cisco设备                            | Cisco设备（HTTP服务）                   |
 | 172.20.1.70   | 135,139,445,1038,1048,1947,3389                                      | Kepware OPC, SafeNet HASP                | Windows 7 Enterprise N SP1           | ICS控制主机（KEPWARE服务器）            |
 | 172.20.1.100  | 135,139,445,3389,4002,27000                                          | RDP, FlexLM许可管理                      | Windows 10                           | 工程工作站                              |
